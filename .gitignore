@@ -37,3 +37,4 @@
 cmake-build-debug/
 old/
 out/
+*.user
