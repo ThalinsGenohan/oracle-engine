@@ -260,6 +260,7 @@ Tilemap* Game::GetCurrentTilemap() const
 void Game::SetCurrentTilemap(const std::string& name)
 {
 	this->_currentTilemap = &TilemapManager.Get(name);
+	this->_currentTilemap->SetTileUpdate(true);
 }
 
 void Game::HandleCameraScreenTransition()
