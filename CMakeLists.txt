@@ -32,13 +32,13 @@ set(SRC
 	${INCROOT}/Graphics/Camera.h
 	${INCROOT}/Graphics/FrameBuffer.h
 	${INCROOT}/Graphics/Renderer.h
-	${INCROOT}/Graphics/Shader.h
+	
 	${INCROOT}/Graphics/Texture2D.h
 
 	${SRCROOT}/Graphics/Camera.cpp
 	${SRCROOT}/Graphics/FrameBuffer.cpp
 	${SRCROOT}/Graphics/Renderer.cpp
-	${SRCROOT}/Graphics/Shader.cpp
+	
 	${SRCROOT}/Graphics/Texture2D.cpp
 )
 source_group("" FILES ${SRC})

@@ -7,12 +7,12 @@
 #include <fstream>
 #include <spdlog/spdlog.h>
 #include <yaml-cpp/yaml.h>
+#include <OtterML/Graphics/Shader.hpp>
 
 #include "Game.h"
 #include "stb_image.h"
 #include "Tilemap.h"
 #include "Tileset.h"
-#include "Graphics/Shader.h"
 #include "Graphics/Texture2D.h"
 
 namespace oter

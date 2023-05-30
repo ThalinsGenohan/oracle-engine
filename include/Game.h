@@ -6,6 +6,7 @@
 #define ORACLES_GAME_H
 
 #include <string>
+#include <OtterML/Graphics/Shader.hpp>
 
 #include "AssetManager.h"
 #include "Tilemap.h"
@@ -14,7 +15,6 @@
 #include "Graphics/Camera.h"
 #include "Graphics/FrameBuffer.h"
 #include "Graphics/Renderer.h"
-#include "Graphics/Shader.h"
 #include "Graphics/Texture2D.h"
 
 namespace oter

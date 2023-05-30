@@ -4,13 +4,13 @@
 
 #include "Graphics/Renderer.h"
 
+#include <OtterML/Graphics/Shader.hpp>
 #include <OtterML/System/Vector2.hpp>
 
 #include "Game.h"
 #include "GameObject.h"
 #include "Tilemap.h"
 #include "Graphics/FrameBuffer.h"
-#include "Graphics/Shader.h"
 
 namespace oter
 {
