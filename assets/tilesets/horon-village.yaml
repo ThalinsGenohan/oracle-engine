@@ -16,3 +16,19 @@ tilesets:
             - water: [20, 21, 22, 23]
             - seawaterL: [30, 31]
             - seawaterR: [30, 31]
+    autumn:
+        filepath: "assets/tilesets/horon-village-autumn-tiles.png"
+        animations:
+            - flower0: [5, 6, 7, 8]
+            - flower1: [7, 8, 5, 6]
+            - water: [20, 21, 22, 23]
+            - seawaterL: [30, 31]
+            - seawaterR: [30, 31]
+    winter:
+        filepath: "assets/tilesets/horon-village-winter-tiles.png"
+        animations:
+            - flower0: [5, 6, 7, 8]
+            - flower1: [7, 8, 5, 6]
+            - water: [20, 21, 22, 23]
+            - seawaterL: [30, 31]
+            - seawaterR: [30, 31]

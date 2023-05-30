@@ -52,16 +52,16 @@ void Game::Init()
 	// Load Textures
 	TextureManager.Load("link", "assets/sprites/link.yaml");
 	// Load Tilesets
-	TilesetManager.Load("tilesetAtlas", "assets/tilesets/horon-village.yaml");
+	const Tileset& tileset = TilesetManager.Load("tilesetAtlas", "assets/tilesets/horon-village.yaml");
 	// Load Tilemaps
 	TilemapManager.Load("horon-village-spring", "assets/maps/horon-village-spring.map")
-	              .SetTilesetID(0);
+	              .SetTilesetID(tileset.GetTilesetID("spring"));
 	TilemapManager.Load("horon-village-summer", "assets/maps/horon-village-summer.map")
-	              .SetTilesetID(1);
-	/*TilemapManager.Load("horon-village-autumn", "assets/maps/horon-village-autumn.map")
-	              .SetTilesetID(2);
+	              .SetTilesetID(tileset.GetTilesetID("summer"));
+	TilemapManager.Load("horon-village-autumn", "assets/maps/horon-village-autumn.map")
+	              .SetTilesetID(tileset.GetTilesetID("autumn"));
 	TilemapManager.Load("horon-village-winter", "assets/maps/horon-village-winter.map")
-	              .SetTilesetID(3);*/
+	              .SetTilesetID(tileset.GetTilesetID("winter"));
 
 	// Prep assets
 	const Shader* frameBufferShader = &ShaderManager.Get("framebuffer");
