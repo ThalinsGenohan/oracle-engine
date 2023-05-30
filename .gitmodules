@@ -1,0 +1,3 @@
+[submodule "lib/OtterML"]
+	path = lib/OtterML
+	url = https://github.com/ThalinsGenohan/OtterML.git
