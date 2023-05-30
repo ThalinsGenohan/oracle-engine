@@ -1,0 +1,102 @@
+texturePath: "assets/sprites/link.png"
+framesPath: "assets/sprites/link-frames.yaml"
+frameSize: { x: 20, y: 19 }
+directions: [ "down", "left", "up", "right", "special" ]
+animations:
+    stand: [ { pos: 0, ms: 100 } ]
+    stand-shield-small: [ { pos: 3, ms: 100 } ]
+    stand-shield-large: [ { pos: 6, ms: 100 } ]
+    block-small: [ { pos: 9, ms: 100 } ]
+    block-large: [ { pos: 12, ms: 100 } ]
+    carry: [ { pos: 20, ms: 100 } ]
+    swing-hold: [ { pos: 25, ms: 100 }, { pos: 26, ms: 100 } ]
+    walk: [ { pos: 1, ms: 100 }, { pos: 2, ms: 100 } ]
+    walk-shield-small: [ { pos: 4, ms: 100 }, { pos: 5, ms: 100 } ]
+    walk-shield-large: [ { pos: 7, ms: 100 }, { pos: 8, ms: 100 } ]
+    walk-block-small: [ { pos: 10, ms: 100 }, { pos: 11, ms: 100 } ]
+    walk-block-large: [ { pos: 13, ms: 100 }, { pos: 14, ms: 100 } ]
+    walk-carry: [ { pos: 21, ms: 100 }, { pos: 22, ms: 100 } ]
+    push: [ { pos: 15, ms: 100 }, { pos: 16, ms: 100 } ]
+    grab: [ { pos: 17, ms: 100 } ]
+    pull: [ { pos: 18, ms: 100 } ]
+    lift: [ { pos: 19, ms: 100 } ]
+    swing: [ { pos: 23, ms: 100 }, { pos: 24, ms: 100 } ]
+    stab: [ { pos: 27, ms: 100 } ]
+    jump: [ { pos: 28, ms: 100 }, { pos: 29, ms: 100 }, { pos: 30, ms: 100 }, { pos: 31, ms: 100 } ]
+    fly: [ { pos: 32, ms: 100 } ]
+    dig: [ { pos: 33, ms: 100 }, { pos: 34, ms: 100 } ]
+    aim: [ { pos: 35, ms: 100 } ]
+    aim-diagonal: [ { pos: 36, ms: 100 } ]
+    cart: [ { pos: 37, ms: 100 } ]
+    cart-carry: [ { pos: 38, ms: 100 } ]
+    cart-swing: [ { pos: 39, ms: 100 }, { pos: 40, ms: 100 } ]
+    cart-aim: [ { pos: 41, ms: 100 } ]
+    cart-aim-diagonal: [ { pos: 42, ms: 100 } ]
+    ride: [ { pos: 43, ms: 100 } ]
+    walk-ride: [ { pos: 44, ms: 100 }, { pos: 45, ms: 100 } ]
+    swim: [ { pos: 46, ms: 100 }, { pos: 47, ms: 100 } ]
+    dive: [ { pos: 48, ms: 100 }, { pos: 49, ms: 100 } ]
+    swim-mermaid: [ { pos: 50, ms: 100 }, { pos: 51, ms: 100 } ]
+    swing-mermaid: [ { pos: 52, ms: 100 }, { pos: 53, ms: 100 } ]
+    aim-mermaid: [ { pos: 54, ms: 100 } ]
+    aim-diagonal-mermaid: [ { pos: 55, ms: 100 } ]
+    swim-side: [ { pos: 56, ms: 100 }, { pos: 57, ms: 100 } ]
+    sing: [ { pos: 58, ms: 100 } ]
+    flute: [ { pos: 0, ms: 100 }, { pos: 1, ms: 100 } ]
+    harp: [ { pos: 2, ms: 100 }, { pos: 3, ms: 100 }, { pos: 4, ms: 100 }, { pos: 5, ms: 100 } ]
+    fall: [ { pos: 6, ms: 100 }, { pos: 7, ms: 100 }, { pos: 8, ms: 100 } ]
+    sway: [ { pos: 9, ms: 100 }, { pos: 10, ms: 100 }, { pos: 11, ms: 100 }, { pos: 12, ms: 100 }, { pos: 13, ms: 100 } ]
+    asleep: [ { pos: 14, ms: 100 } ]
+    awake: [ { pos: 15, ms: 100 } ]
+    dead: [ { pos: 16, ms: 100 } ]
+    stand-idle: [ { pos: 17, ms: 100 } ]
+    get-item: [ { pos: 18, ms: 100 } ]
+    get-big-item: [ { pos: 19, ms: 100 } ]
+    squash: [ { pos: 20, ms: 100 } ]
+    squeeze: [ { pos: 21, ms: 100 } ]
+    spin: [ { pos: 22, ms: 100 }, { pos: 23, ms: 100 }, { pos: 24, ms: 100 }, { pos: 25, ms: 100 }, { pos: 26, ms: 100 }, { pos: 27, ms: 100 }, { pos: 28, ms: 100 } ]
+frameLengthMs: 100
+frameAnimations:
+    idle: "walk.{shield}.{direction}.0"
+    walk: "walk.{shield}.{direction}.{frame}"
+    block: "block.{shield}.{direction}"
+    blockWalk: "blockWalk.{shield}.{direction}.{frame}"
+    push: "push.{direction}.{frame}"
+    grab: "grab.{direction}"
+    pull: "pull.{direction}"
+    lift: "lift.{direction}.{frame}"
+    carry: "carry.{direction}.{frame}"
+    swing: "swing.{direction}.{frame}"
+    holdIdle: "hold.{direction}.0"
+    holdWalk: "hold.{direction}.{frame}"
+    stab: "stab.{direction}"
+    jump: "jump.{direction}.{frame}"
+    fly: "fly.{direction}"
+    dig: "dig.{direction}.{frame}"
+    aim: "aim.{direction}"
+    cart: "cart.{direction}"
+    cartCarry: "cart.carry.{direction}"
+    cartSwing: "cart.swing.{direction}.{frame}"
+    cartAim: "cart.aim.{direction}"
+    ride: "ride.{direction}"
+    rideWalk: "ride.walk.{direction}.{frame}"
+    swimIdle: "swim.{direction}.0"
+    swim: "swim.{direction}.{frame}"
+    dive: "dive.{direction}.{frame}"
+    swimMermaidIdle: "swim.mermaid.{direction}.{down}.0"
+    swimMermaid: "swim.mermaid.{direction}.{down}.{frame}"
+    swingMermaid: "swing.mermaid.{direction}.{frame}"
+    aimMermaid: "aim.mermaid.{direction}"
+    swimSide: "swim.side.{direction}.{frame}"
+    sing: "sing.{frame}"
+    flute: "flute.{frame}"
+    harp: "harp.{frame}"
+    fall: "fall.{frame}"
+    sway: "sway.{frame}"
+    asleep: "asleep"
+    awake: "awake"
+    dead: "dead"
+    stand: "stand"
+    getItem: "getItem.{size}"
+    squash: "squash.{direction}"
+    spin: "spin.{frame}"

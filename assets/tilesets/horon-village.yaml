@@ -1,0 +1,18 @@
+tileSize: { x: 16, y: 16 }
+tilesets:
+    spring:
+        filepath: "assets/tilesets/horon-village-spring-tiles.png"
+        animations:
+            - flower0: [5, 6, 7, 8]
+            - flower1: [7, 8, 5, 6]
+            - water: [20, 21, 22, 23]
+            - seawaterL: [30, 31]
+            - seawaterR: [30, 31]
+    summer:
+        filepath: "assets/tilesets/horon-village-summer-tiles.png"
+        animations:
+            - flower0: [5, 6, 7, 8]
+            - flower1: [7, 8, 5, 6]
+            - water: [20, 21, 22, 23]
+            - seawaterL: [30, 31]
+            - seawaterR: [30, 31]
