@@ -4,7 +4,7 @@
 
 #include "GameObject.h"
 
-namespace oter
+namespace oracle
 {
 GameObject::GameObject(Texture2D& texture) : _texture(texture) {}
 

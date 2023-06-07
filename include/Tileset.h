@@ -10,7 +10,7 @@
 
 #include "types.h"
 
-namespace oter
+namespace oracle
 {
 class Tileset
 {
@@ -35,7 +35,7 @@ private:
 	std::vector<std::string> _tilesetNames = {};
 	v2u                      _tileSize     = v2u::Zero;
 
-	u32 _textureID   = NULL;
+	u32 _textureID   = 0;
 	v2u _textureSize = v2u::Zero;
 };
 }

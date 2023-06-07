@@ -13,7 +13,7 @@
 #include "types.h"
 #include "Graphics/Texture2D.h"
 
-namespace oter
+namespace oracle
 {
 class GameObject
 {
@@ -22,20 +22,20 @@ public:
 
 	const Transform&         GetTransform() const;
 	void                     SetTransform(const Transform& newTransform);
-	const Matrix<f32, 3, 3>& GetMatrix();
+	const m3f& GetMatrix();
 
-	const Angle& GetRotation() const;
+	const oter::Angle& GetRotation() const;
 	const v2f& GetScale() const;
 	const v2f& GetSkew() const;
 	const v2x& GetPosition() const;
 
-	void SetRotation(const Angle& newRotation);
+	void SetRotation(const oter::Angle& newRotation);
 	void SetScale(const v2f& newScale);
 	void SetScale(const f32& newScaleScalar);
 	void SetSkew(const v2f& newSkew);
 	void SetPosition(const v2x& newPosition);
 
-	void Rotate(const Angle& rotationChange);
+	void Rotate(const oter::Angle& rotationChange);
 	void Scale(const v2f& scaleChange);
 	void Scale(const f32& scaleChangeScalar);
 	void Skew(const v2f& skewChange);
@@ -44,7 +44,7 @@ public:
 	const Transform& GetTarget() const;
 	void             SetTarget(const Transform& newTarget);
 
-	const Angle& GetTargetRotation() const;
+	const oter::Angle& GetTargetRotation() const;
 	const v2f& GetTargetZoom() const;
 	const v2f& GetTargetSkew() const;
 	const v2x& GetTargetPosition() const;

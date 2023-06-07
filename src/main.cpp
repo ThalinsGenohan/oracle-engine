@@ -8,7 +8,7 @@ constexpr auto RESOLUTION_WIDTH  = 160;
 constexpr auto RESOLUTION_HEIGHT = 144;
 constexpr auto WINDOW_SCALING    = 5;
 
-oter::Game game{ RESOLUTION_WIDTH, RESOLUTION_HEIGHT };
+oracle::Game game{ RESOLUTION_WIDTH, RESOLUTION_HEIGHT };
 
 int main()
 {
@@ -22,9 +22,9 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	const oter::Window window{ RESOLUTION_WIDTH * WINDOW_SCALING, RESOLUTION_HEIGHT * WINDOW_SCALING, "Oracles" };
+	const oracle::Window window{ RESOLUTION_WIDTH * WINDOW_SCALING, RESOLUTION_HEIGHT * WINDOW_SCALING, "Oracles" };
 	window.MakeCurrent();
-	oter::Window::SetGame(&game);
+	oracle::Window::SetGame(&game);
 
 	if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress)))
 	{
@@ -37,15 +37,15 @@ int main()
 
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-	constexpr oter::f64 maxFPS    = 60.0;
-	constexpr oter::f64 maxPeriod = 1.0 / maxFPS;
+	constexpr oracle::f64 maxFPS    = 60.0;
+	constexpr oracle::f64 maxPeriod = 1.0 / maxFPS;
 
-	oter::f64 lastFrame = 0.0;
+	oracle::f64 lastFrame = 0.0;
 	while (!window.IsClosing())
 	{
-		const oter::f64 currentFrame = glfwGetTime();
-		const oter::f64 deltaTime    = currentFrame - lastFrame;
-		const oter::f64 deltaTimeMs  = deltaTime * 1000.0;
+		const oracle::f64 currentFrame = glfwGetTime();
+		const oracle::f64 deltaTime    = currentFrame - lastFrame;
+		const oracle::f64 deltaTimeMs  = deltaTime * 1000.0;
 		if (deltaTime < maxPeriod)
 			continue;
 		lastFrame = currentFrame;

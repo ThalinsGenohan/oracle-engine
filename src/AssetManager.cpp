@@ -15,7 +15,7 @@
 #include "Tileset.h"
 #include "Graphics/Texture2D.h"
 
-namespace oter
+namespace oracle
 {
 
 // Helper functions
@@ -36,7 +36,7 @@ YAML::Node ReadYAML(const std::string& filepath)
 std::vector<u8>& LoadTextureAtlasFromFiles(const std::vector<std::string>& filepaths, v2u& size);
 
 template <>
-Shader* AssetManager<Shader>::LoadFromFile(const std::string& filepath)
+oter::Shader* AssetManager<oter::Shader>::LoadFromFile(const std::string& filepath)
 {
 	std::string shaderCode = "";
 	try
@@ -66,7 +66,7 @@ Shader* AssetManager<Shader>::LoadFromFile(const std::string& filepath)
 		geomCode.insert(pos, "\n#define GEOM 1");
 	}
 
-	auto* shader = new Shader();
+	auto* shader = new oter::Shader();
 	shader->Compile(vertCode, geomCode, fragCode);
 	return shader;
 }
@@ -81,7 +81,7 @@ void LoadFrames(const std::string& filepath)
 	v2u size = frameGrid["size"].as<v2u>();
 	v2u dimensions = frameGrid["dimensions"].as<v2u>();
 	YAML::Node names = frameGrid["names"];
-	
+
 }
 
 template <>

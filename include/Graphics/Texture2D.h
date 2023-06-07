@@ -11,7 +11,7 @@
 
 #include "types.h"
 
-namespace oter
+namespace oracle
 {
 class Texture2D
 {
@@ -46,7 +46,7 @@ public:
 	void SetAnimationFrame(const std::string& animationName, u32 frameNumber, const AnimationFrame& frame);
 
 private:
-	u32 _id        = NULL;
+	u32 _id        = 0;
 	v2u _size      = v2u::Zero;
 	v2u _frameSize = v2u::Zero;
 

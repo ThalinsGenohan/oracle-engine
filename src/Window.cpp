@@ -9,7 +9,7 @@
 
 #include "Input.h"
 
-namespace oter
+namespace oracle
 {
 Game* Window::_game;
 

@@ -8,7 +8,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace oter
+namespace oracle
 {
 template <typename T>
 class AssetManager

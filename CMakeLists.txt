@@ -28,17 +28,17 @@ set(SRC
 	${SRCROOT}/Tilemap.cpp
 	${SRCROOT}/Tileset.cpp
 	${SRCROOT}/Window.cpp
-	
+
 	${INCROOT}/Graphics/Camera.h
 	${INCROOT}/Graphics/FrameBuffer.h
 	${INCROOT}/Graphics/Renderer.h
-	
+
 	${INCROOT}/Graphics/Texture2D.h
 
 	${SRCROOT}/Graphics/Camera.cpp
 	${SRCROOT}/Graphics/FrameBuffer.cpp
 	${SRCROOT}/Graphics/Renderer.cpp
-	
+
 	${SRCROOT}/Graphics/Texture2D.cpp
 )
 source_group("" FILES ${SRC})
@@ -63,7 +63,7 @@ set(ASSETS_DEST "${CMAKE_CURRENT_BINARY_DIR}/assets")
 
 add_custom_command(
     TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E create_symlink ${ASSETS_SOURCE} ${ASSETS_DEST} 
+    COMMAND ${CMAKE_COMMAND} -E create_symlink ${ASSETS_SOURCE} ${ASSETS_DEST}
     DEPENDS ${destination}
     COMMENT "symbolic link resources folder from ${ASSETS_SOURCE} => ${ASSETS_DEST}"
 )
@@ -76,7 +76,7 @@ add_custom_command(
 
 add_subdirectory(lib/OtterML)
 target_link_libraries(oracles OtterML::System OtterML::Graphics)
-target_include_directories(oracles PUBLIC "lib/OtterML/include")
+target_include_directories(oracles PUBLIC lib/OtterML)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)

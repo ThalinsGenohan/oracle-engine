@@ -5,7 +5,7 @@
 
 #include "Game.h"
 
-namespace oter
+namespace oracle
 {
 Tilemap::Tilemap() {}
 

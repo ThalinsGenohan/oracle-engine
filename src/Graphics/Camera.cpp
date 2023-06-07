@@ -1,6 +1,6 @@
 #include "Graphics/Camera.h"
 
-namespace oter
+namespace oracle
 {
 Camera::Camera(const v2u& size) : _size(size) {}
 
@@ -151,7 +151,7 @@ void Camera::UpdatePosition()
 		newPosition.Y = std::min(position.Y + this->_moveSpeed.Y, targetPosition.Y);
 	if (comparisonY == std::partial_ordering::greater)
 		newPosition.Y = std::max(targetPosition.Y, position.Y - this->_moveSpeed.Y);
-	
+
 	this->_fixedPosition = newPosition;
 	this->_transform.SetTranslation(v2f(newPosition));
 }

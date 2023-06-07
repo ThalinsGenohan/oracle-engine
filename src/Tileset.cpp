@@ -2,7 +2,7 @@
 
 #include <glad/glad.h>
 
-namespace oter
+namespace oracle
 {
 Tileset::Tileset()
 {

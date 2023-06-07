@@ -11,7 +11,7 @@
 #include <spdlog/sinks/stdout_sinks.h>
 #include <yaml-cpp/yaml.h>
 
-namespace oter_old
+namespace oracle_old
 {
 template <typename T>
 struct Vector3

@@ -12,7 +12,7 @@
 
 class GLFWwindow;
 
-namespace oter
+namespace oracle
 {
 class Window
 {

@@ -9,7 +9,7 @@
 
 #include "types.h"
 
-namespace oter
+namespace oracle
 {
 class Tileset;
 
@@ -53,7 +53,7 @@ private:
 	bool             _tileUpdatePending = false;
 	std::vector<u16> _tiles             = {};
 
-	u32 _tileset = NULL;
+	u32 _tileset = 0;
 };
 }
 

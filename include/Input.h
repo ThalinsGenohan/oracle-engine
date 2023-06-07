@@ -7,7 +7,7 @@
 
 #include "types.h"
 
-namespace oter
+namespace oracle
 {
 constexpr auto MAX_KEYS = 1024;
 

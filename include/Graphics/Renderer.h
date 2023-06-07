@@ -12,8 +12,11 @@
 
 namespace oter
 {
-class Shader;
+	class Shader;
+}
 
+namespace oracle
+{
 template <typename T>
 class Renderer
 {
@@ -38,10 +41,10 @@ public:
 		glBindVertexArray(this->_vao);
 	}
 
-	void Draw(T&, const Shader& shader);
+	void Draw(T&, const oter::Shader& shader);
 
 private:
-	u32                         _vao  = NULL;
+	u32                         _vao  = 0;
 	std::unordered_map<T*, u32> _vbos = {};
 };
 }

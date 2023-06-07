@@ -7,7 +7,7 @@
 
 #include "types.h"
 
-namespace oter
+namespace oracle
 {
 class FrameBuffer
 {
@@ -26,8 +26,8 @@ public:
 private:
 	v2u _size = v2u::Zero;
 
-	u32 _framebufferID = NULL;
-	u32 _textureID     = NULL;
+	u32 _framebufferID = 0;
+	u32 _textureID     = 0;
 	//u32 _renderbufferID;
 };
 }

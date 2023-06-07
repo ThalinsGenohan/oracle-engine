@@ -5,7 +5,7 @@
 
 #include "types.h"
 
-namespace oter
+namespace oracle
 {
 class GameObject;
 

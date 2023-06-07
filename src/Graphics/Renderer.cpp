@@ -12,10 +12,10 @@
 #include "Tilemap.h"
 #include "Graphics/FrameBuffer.h"
 
-namespace oter
+namespace oracle
 {
 template <>
-void Renderer<FrameBuffer>::Draw(FrameBuffer& frameBuffer, const Shader& shader)
+void Renderer<FrameBuffer>::Draw(FrameBuffer& frameBuffer, const oter::Shader& shader)
 {
 	constexpr float vertices[16] = {
 		-1.f, -1.f, 0.f, 0.f,
@@ -29,7 +29,7 @@ void Renderer<FrameBuffer>::Draw(FrameBuffer& frameBuffer, const Shader& shader)
 	// Create VBO if needed
 	if (!this->_vbos.contains(&frameBuffer))
 	{
-		this->_vbos[&frameBuffer] = NULL;
+		this->_vbos[&frameBuffer] = 0;
 		glGenBuffers(1, &this->_vbos[&frameBuffer]);
 		glBindBuffer(GL_ARRAY_BUFFER, this->_vbos[&frameBuffer]);
 		glBufferData(GL_ARRAY_BUFFER, sizeof vertices, vertices, GL_STATIC_DRAW);
@@ -55,7 +55,7 @@ void Renderer<FrameBuffer>::Draw(FrameBuffer& frameBuffer, const Shader& shader)
 }
 
 template <>
-void Renderer<GameObject>::Draw(GameObject& gameObject, const Shader& shader)
+void Renderer<GameObject>::Draw(GameObject& gameObject, const oter::Shader& shader)
 {
 	const Texture2D& texture                       = gameObject.GetTexture();
 	const v2u&       frameSize                     = texture.GetFrameSize();
@@ -73,7 +73,7 @@ void Renderer<GameObject>::Draw(GameObject& gameObject, const Shader& shader)
 	// Create VBO if needed
 	if (!this->_vbos.contains(&gameObject))
 	{
-		this->_vbos[&gameObject] = NULL;
+		this->_vbos[&gameObject] = 0;
 		glGenBuffers(1, &this->_vbos[&gameObject]);
 		glBindBuffer(GL_ARRAY_BUFFER, this->_vbos[&gameObject]);
 		glBufferData(GL_ARRAY_BUFFER, sizeof vertices, vertices, GL_DYNAMIC_DRAW);
@@ -104,13 +104,13 @@ void Renderer<GameObject>::Draw(GameObject& gameObject, const Shader& shader)
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
 	// Unbind all
-	glBindVertexArray(NULL);
-	glBindBuffer(GL_ARRAY_BUFFER, NULL);
-	glBindTexture(GL_TEXTURE_2D, NULL);
+	glBindVertexArray(0);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 template <>
-void Renderer<Tilemap>::Draw(Tilemap& tilemap, const Shader& shader)
+void Renderer<Tilemap>::Draw(Tilemap& tilemap, const oter::Shader& shader)
 {
 	const std::vector<u16>& tiles = tilemap.GetTiles();
 	glBindVertexArray(this->_vao);
@@ -118,7 +118,7 @@ void Renderer<Tilemap>::Draw(Tilemap& tilemap, const Shader& shader)
 	// Create VBO if needed
 	if (!this->_vbos.contains(&tilemap))
 	{
-		this->_vbos[&tilemap] = NULL;
+		this->_vbos[&tilemap] = 0;
 		glGenBuffers(1, &this->_vbos[&tilemap]);
 		glBindBuffer(GL_ARRAY_BUFFER, this->_vbos[&tilemap]);
 		glBufferData(GL_ARRAY_BUFFER, tilemap.GetTileCount() * sizeof tiles[0], tiles.data(), GL_DYNAMIC_DRAW);

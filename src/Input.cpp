@@ -4,7 +4,7 @@
 
 #include "Input.h"
 
-namespace oter
+namespace oracle
 {
 static bool justPressedKeys[MAX_KEYS];
 static bool heldKeys[MAX_KEYS];

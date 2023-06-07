@@ -11,9 +11,9 @@
 #include "GameObject.h"
 #include "Input.h"
 
-namespace oter
+namespace oracle
 {
-AssetManager<Shader>    Game::ShaderManager;
+AssetManager<oter::Shader>    Game::ShaderManager;
 AssetManager<Texture2D> Game::TextureManager;
 AssetManager<Tileset>   Game::TilesetManager;
 AssetManager<Tilemap>   Game::TilemapManager;
@@ -64,16 +64,16 @@ void Game::Init()
 	              .SetTilesetID(tileset.GetTilesetID("winter"));
 
 	// Prep assets
-	const Shader* frameBufferShader = &ShaderManager.Get("framebuffer");
+	const oter::Shader* frameBufferShader = &ShaderManager.Get("framebuffer");
 	frameBufferShader->Use();
 	frameBufferShader->SetInt("uScreenTexture", 0);
 
-	const Shader* spriteShader = &ShaderManager.Get("sprite");
+	const oter::Shader* spriteShader = &ShaderManager.Get("sprite");
 	spriteShader->Use();
 	spriteShader->SetMatrix3("uView", this->_camera.GetMatrix());
 	spriteShader->SetVector2u("uResolution", this->_worldViewSize);
 
-	const Shader* tilemapShader = &ShaderManager.Get("tilemap");
+	const oter::Shader* tilemapShader = &ShaderManager.Get("tilemap");
 	tilemapShader->Use();
 	tilemapShader->SetMatrix3("uView", this->_camera.GetMatrix());
 	tilemapShader->SetVector2u("uResolution", this->_worldViewSize);
@@ -243,7 +243,7 @@ void Game::Render()
 	glViewport(0, this->_worldViewSize.Y, this->_hudSize.X, this->_hudSize.Y);
 
 	// Unbind framebuffers
-	glBindFramebuffer(GL_FRAMEBUFFER, NULL);
+	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
 void Game::Draw()

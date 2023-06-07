@@ -5,7 +5,7 @@
 
 #include <glad/glad.h>
 
-namespace oter
+namespace oracle
 {
 Texture2D::Texture2D()
 {
@@ -36,7 +36,7 @@ void Texture2D::Generate(const v2u& size, const u8* data)
 void Texture2D::Delete()
 {
 	glDeleteTextures(1, &this->_id);
-	this->_id = NULL;
+	this->_id = 0;
 }
 
 void Texture2D::Bind() const

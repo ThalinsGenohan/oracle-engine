@@ -17,17 +17,17 @@
 #include "Graphics/Renderer.h"
 #include "Graphics/Texture2D.h"
 
-namespace oter
+namespace oracle
 {
 class GameObject;
 
 class Game
 {
 public:
-	static AssetManager<Shader>    ShaderManager;
-	static AssetManager<Texture2D> TextureManager;
-	static AssetManager<Tileset>   TilesetManager;
-	static AssetManager<Tilemap>   TilemapManager;
+	static AssetManager<oter::Shader> ShaderManager;
+	static AssetManager<Texture2D>    TextureManager;
+	static AssetManager<Tileset>      TilesetManager;
+	static AssetManager<Tilemap>      TilemapManager;
 
 	Game(u32 width, u32 height);
 	~Game();

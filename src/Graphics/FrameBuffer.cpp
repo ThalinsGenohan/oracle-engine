@@ -7,7 +7,7 @@
 #include <glad/glad.h>
 #include <spdlog/spdlog.h>
 
-namespace oter
+namespace oracle
 {
 FrameBuffer::FrameBuffer(const v2u& size) : _size(size) {}
 
@@ -39,7 +39,7 @@ void FrameBuffer::Init()
 	if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
 		spdlog::error("Framebuffer is not complete!");
 
-	glBindFramebuffer(GL_FRAMEBUFFER, NULL);
+	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
 void FrameBuffer::Bind() const
